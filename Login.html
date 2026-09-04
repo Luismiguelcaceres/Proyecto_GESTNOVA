@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
+    <meta name="description" content="Inicia sesión en el panel de la empresa.">
+    <title>Iniciar Sesión | Crear cuenta</title>
 </head>
 <body>
-    
+    <header>
+        <a href="Index.html">
+        <img src="src/images/logo.jpg.jpeg" width="100" height="50" alt="Logo de la empresa">
+        </a>
+    </header>    
+<main>
+    <section aria-labelledby="titulo-login">
+        <h1 id="titulo-login">Iniciar Sesión</h1>
+        <!-- form: define el formulario. action indica a dónde se envían los datos -->
+        <form action="#" method="POST">   
+        <!-- fieldset agrupa campos; legend describe el grupo -->
+            <fieldset>
+                <legend>Credenciales de acceso</legend>
+                    <div class="container" id="container">
+                        
+                        <div class="form-panel signin-panel">
+                                <div class="socials">
+                                    <h3>con</h3>
+                                    <a href="#" aria-label="Google">G</a>
+                                </div>
+                                <p class="hint">o usa tu correo y contraseña</p>
+
+                                <label for="email">Correo electrónico</label>
+                                <input class="field" type="email" id="email" placeholder="Correo electrónico" required>
+                                <br>
+
+                                <label for="password">Contraseña</label>
+                                <input class="field" type="password" id="password" placeholder="Contraseña" required>
+                                <br>
+
+                                <a class="forgot" href="#">¿Olvidaste tu contraseña?</a>
+                                <br>
+                                <button class="btn" type="submit">Iniciar Sesión</button>
+                        </div>
+
+                    </div>
+            </fieldset>
+        </form>
+    </section>     
+</main>
+<footer>
+<p>&copy; 2026 CMD | GESTNOVA. Todos los derechos reservados.</p>
+</footer>   
+
 </body>
 </html>
