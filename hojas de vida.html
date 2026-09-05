@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hojas de Vida — Vehículos y Maquinaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<body>
+    <div class="sheet-header">
+        <div class="id-block">
+            <div>
+                <h1>Hoja de vida — vehículo / maquinaria</h1>
+                <div class="sub">Diligencia todos los campos correspondientes al equipo</div>
+            </div>
+            <div class="actions">
+                <button id="btnPrint">Imprimir / Exportar PDF</button>
+                <button id="btnExportJSON">Exportar datos</button>
+                <button class="primary" id="btnGuardar">Guardar registro</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>1. Datos generales</h2>
+        <p class="hint">Identificación básica del equipo.</p>
+        <div class="field-grid">
+         <div class="field">
+            <label>Placa / código interno</label>
+              <input class="mono" id="placa" placeholder="Ej. ABC123"></div>
+                <div class="field"><label>Tipo</label>
+                    <select id="tipo">
+                    <option>Vehículo liviano</option>
+                    <option>Vehículo pesado</option>
+                    <option>Motocicleta</option>
+                    <option>Maquinaria</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Marca</label>
+                     <input id="marca" placeholder="Ej. Chevrolet"></div>
+                <div class="field">
+                    <label>Línea / modelo</label>
+                     <input id="linea" placeholder="Ej. NPR"></div>
+                <div class="field">
+                    <label>Año</label>
+                     <input id="anio" type="number" placeholder="Ej. 2019"></div>
+                <div class="field">
+                    <label>Color</label>
+                     <input id="color"></div>
+                <div class="field">
+                    <label>Kilometraje / horómetro</label>
+                     <input id="kilometraje" type="number">
+                </div>
+                <div class="field">
+                    <label>Unidad de medida</label>
+                    <select id="unidadMedida">
+                        <option value="km">Kilómetros</option>
+                        <option value="horas">Horas</option>
+                    </select>
+                </div>
+                </div>
+    </div>
+    
+    <div class="section">
+        <h2>2. Datos técnicos</h2>
+        <p class="hint">Especificaciones mecánicas del equipo.</p>
+        <div class="field-grid">
+            <div class="field">
+             <label>No. de motor</label>
+                <input class="mono" id="motor"></div>
+                <div class="field">
+                 <label>No. de chasis / VIN</label>
+                  <input class="mono" id="chasisVin"></div>
+                <div class="field">
+                 <label>Cilindraje (cc)</label>
+                  <input id="cilindraje" type="number"></div>
+                    <div class="field">
+                    <label>Capacidad</label>
+                    <input id="capacidad" placeholder="Ej. 3.5 toneladas / 5 pasajeros"></div>
+                    <div class="field">
+                    <label>Transmisión</label>
+                    <select id="transmision"><option>Manual</option><option>Automática</option><option>Hidrostática</option></select>
+                </div>
+            </div>
+    </div>
+        
+    <div class="section">
+        <h2>3. Documentos</h2>
+         <p class="hint">Vigencias de la documentación legal del equipo.</p>
+            <div class="doc-block">
+            <h3>SOAT</h3>
+             <div class="field-grid">
+                <div class="field">
+                    <label>Vigente hasta</label>
+                     <input type="date" id="soatFin"></div>
+            </div>
+                </div>
+                <div class="doc-block">
+                 <h3>Revisión tecnomecánica</h3>
+                    <div class="field-grid">
+                        <div class="field">
+                            <label>Vigente hasta</label>
+                             <input type="date" id="tecFin"></div>
+                    </div>
+                    </div>
+                    <div class="doc-block">
+                    <h3>Seguro todo riesgo</h3>
+                    <div class="field-grid">
+                        <div class="field"><label>Aseguradora</label><input id="polAseguradora"></div>
+                        <div class="field"><label>No. de póliza</label><input class="mono" id="polNumero"></div>
+                        <div class="field"><label>Vigente hasta</label><input type="date" id="polFin"></div>
+                    </div>
+                    </div>
+                    <div class="doc-block">
+                    <h3>Tarjeta de propiedad</h3>
+                    <div class="field-grid">
+                        <div class="field"><label>Número</label><input class="mono" id="tpNumero"></div>
+                    </div>
+            </div>
+    </div>
+    
+    <div class="section">
+        <h2>4. Historial de mantenimiento</h2>
+        <p class="hint">Registra cada mantenimiento preventivo o correctivo realizado.</p>
+        <div class="maint-form">
+        <div class="field"><label>Fecha</label><input type="date" id="mFecha"></div>
+        <div class="field"><label>Tipo</label>
+            <select id="mTipo"><option>Preventivo</option><option>Correctivo</option></select>
+        </div>
+        <div class="field"><label>Km / horas</label><input type="number" id="mKm"></div>
+        <div class="field"><label>Descripción</label><input type="text" id="mDesc"></div>
+        <div class="field"><label>Costo (COP)</label><input type="number" id="mCosto"></div>
+        <button class="btn-add" id="btnAddMaint">Agregar</button>
+        </div>
+        <table>
+        <thead><tr><th>Fecha</th><th>Tipo</th><th>Km / horas</th><th>Descripción</th><th>Costo</th><th></th></tr></thead>
+        <tbody id="maintBody"><tr><td colspan="6" class="no-rows">Aún no hay registros de mantenimiento.</td></tr></tbody>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2>5. Asignación</h2>
+        <p class="hint">Responsable actual del equipo.</p>
+        <div class="field-grid">
+        <div class="field"><label>Conductor / operario</label><input id="asigConductor"></div>
+        <div class="field"><label>Cédula</label><input class="mono" id="asigCedula"></div>
+        <div class="field"><label>Sede / base</label><input id="asigSede"></div>
+        <div class="field"><label>Centro de costo / área</label><input id="asigCentroCosto"></div>
+        <div class="field"><label>Fecha de asignación</label><input type="date" id="asigFecha"></div>
+        </div>
+    </div>
+</div>
+ 
+<div class="saved-toast" id="toast">Registro guardado</div>
+
+        <div class="app">
+            <aside class="sidebar">
+                    <div class="brand-text">
+                        <h1>Hojas de Vida</h1>
+                        <span>Vehículos y maquinaria</span>
+                    </div>
+                </div>
+            
+                <input class="search" id="searchInput" placeholder="Buscar por placa, marca o línea...">
+                    <div class="filters" id="filterChips"></div>
+                    <div class="list-label" id="listLabel">Flota</div>
+                    <div class="vehicle-list" id="vehicleList"></div>
+                
+                <button class="btn-new" id="btnNew">+ Nuevo vehículo o máquina</button>
+            </aside>
+        
+        <main class="main">
+            <div class="statsbar" id="statsBar"></div>
+            <div class="detail" id="detail"></div>
+        </main>
+        </div>
+    </main>
+
+</body>
+</html>
