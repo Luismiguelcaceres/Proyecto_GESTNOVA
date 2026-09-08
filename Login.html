@@ -4,52 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Inicia sesión en el panel de la empresa.">
-    <title>Iniciar Sesión | Crear cuenta</title>
+    <title>Iniciar Sesión</title>
 </head>
 <body>
     <header>
         <a href="Index.html">
         <img src="src/images/logo.jpg.jpeg" width="100" height="50" alt="Logo de la empresa">
-        </a>
-    </header>    
-<main>
-    <section aria-labelledby="titulo-login">
-        <h1 id="titulo-login">Iniciar Sesión</h1>
-        <!-- form: define el formulario. action indica a dónde se envían los datos -->
-        <form action="#" method="POST">   
-        <!-- fieldset agrupa campos; legend describe el grupo -->
-            <fieldset>
-                <legend>Credenciales de acceso</legend>
-                    <div class="container" id="container">
-                        
-                        <div class="form-panel signin-panel">
-                                <div class="socials">
-                                    <h3>con</h3>
-                                    <a href="#" aria-label="Google">G</a>
+        </a>  
+
+        <main>
+            <section aria-labelledby="titulo-login">
+                <h1 id="titulo-login">Iniciar Sesión</h1>
+                <!-- form: define el formulario. action indica a dónde se envían los datos -->
+                <form action="admin.html" method="POST">   
+                <!-- fieldset agrupa campos; legend describe el grupo -->
+                    <fieldset>
+                        <legend>Credenciales de acceso</legend>
+                            <div class="container" id="container">
+                                
+                                <div class="form-panel signin-panel">
+                                        <div class="socials">
+                                            <h3>con</h3>
+                                            <a href="#" aria-label="Google">G</a>
+                                        </div>
+                                        <p class="hint">o usa tu correo y contraseña</p>
+
+                                        <label for="email">Correo electrónico</label>
+                                        <input class="field" type="email" id="email" placeholder="Correo electrónico" required>
+                                        <br>
+
+                                        <label for="password">Contraseña</label>
+                                        <input class="field" type="password" id="password" placeholder="Contraseña" required>
+                                        <br>
+
+                                        <a class="forgot" href="#">¿Olvidaste tu contraseña?</a>
+                                        <br>
+                                            
+                                        <button class="btn" type="submit">Iniciar Sesión</button>
+                                        <li class="signup-link">¿No tienes cuenta? <a href="Register.html">Regístrate</a></li>
                                 </div>
-                                <p class="hint">o usa tu correo y contraseña</p>
 
-                                <label for="email">Correo electrónico</label>
-                                <input class="field" type="email" id="email" placeholder="Correo electrónico" required>
-                                <br>
+                            </div>
+                    </fieldset>
+                </form>
+            </section>     
+        </main>
 
-                                <label for="password">Contraseña</label>
-                                <input class="field" type="password" id="password" placeholder="Contraseña" required>
-                                <br>
-
-                                <a class="forgot" href="#">¿Olvidaste tu contraseña?</a>
-                                <br>
-                                <button class="btn" type="submit">Iniciar Sesión</button>
-                        </div>
-
-                    </div>
-            </fieldset>
-        </form>
-    </section>     
-</main>
-<footer>
-<p>&copy; 2026 CMD | GESTNOVA. Todos los derechos reservados.</p>
-</footer>   
-
+   <hr>
+    <!-- ============ PIE DE PÁGINA ============ -->
+        <footer>
+                <p>Contacto: Contacto: contacto@cmdproyectos.com.co</p>
+                <p>Telefono:  (8) 772 8631</p>
+                <p>Dirección:Calle 54 No 11B-05 Parque Industrial Sogamoso</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d862755.395344158!2d-73.48427132656253!3d5.751463000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a462f7fb203f5%3A0x59ff5c2c98925f4b!2sCompania%20de%20Montajes%2C%20Diseno%20y%20Construccion!5e1!3m2!1ses-419!2sus!4v1788488903629!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <p>horarios: Lunes a viernes de 8:00 AM a 6:00 PM</p>
+                <p>&copy; 2026 GESTNOVA Todos los derechos reservados.</p>
+        </footer>
+    </header>
 </body>
 </html>
