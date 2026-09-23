@@ -1,0 +1,250 @@
+
+/* =========== GESTNOVA - Hoja de estilos ======================== */
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: #1a1a1a;
+    background-color: #f5f7f9;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+ 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ 
+/* ============ HEADER ============ */
+ 
+header {
+    background-color: #4b5e7a;
+    color: #f3fbfb;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+ 
+header > a {
+    display: block;
+    padding: 20px 30px;
+}
+ 
+header img {
+    display: block;
+    border-radius: 4px;
+}
+ 
+.title {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #f3fbfb;
+}
+ 
+.hero-text {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+ 
+/* ============ MAIN / LOGIN ============ */
+ 
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+ 
+main section {
+    width: 100%;
+    max-width: 420px;
+}
+ 
+#titulo-login {
+    font-family: "Source Serif 4", serif;
+    color: #4b5e7a;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+ 
+fieldset {
+    border: none;
+}
+ 
+legend {
+    display: none; /* accesible para lectores de pantalla, oculta visualmente */
+}
+ 
+.container {
+    background-color: #f3fbfb;
+    padding: 35px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+ 
+.form-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+ 
+.socials {
+    text-align: center;
+}
+ 
+.socials h3 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+ 
+.socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #d7dee5;
+    font-weight: 700;
+    color: #4b5e7a;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+ 
+.socials a:hover {
+    background-color: #5299d3;
+    color: #f3fbfb;
+}
+ 
+.hint {
+    text-align: center;
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 6px 0 4px;
+}
+ 
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4b5e7a;
+    margin-bottom: 4px;
+}
+ 
+.field {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d7dee5;
+    border-radius: 6px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.field:focus {
+    outline: none;
+    border-color: #5299d3;
+    box-shadow: 0 0 0 3px rgba(82, 153, 211, 0.2);
+}
+ 
+.forgot {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    color: #5299d3;
+    margin-top: -6px;
+}
+ 
+.forgot:hover {
+    text-decoration: underline;
+}
+ 
+.btn {
+    width: 100%;
+    background-color: #4b5e7a;
+    color: #f3fbfb;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+ 
+.btn:hover {
+    background-color: #145a80;
+}
+ 
+.signup-link {
+    list-style: none;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #4b5e7a;
+    margin-top: 6px;
+}
+ 
+.signup-link a {
+    color: #5299d3;
+    font-weight: 600;
+}
+ 
+.signup-link a:hover {
+    text-decoration: underline;
+}
+ 
+/* ============ FOOTER ============ */
+ 
+footer {
+    background-color: #5299d3;
+    color: #1a1a1a;
+    text-align: center;
+    padding: 30px 20px;
+}
+ 
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+ 
+footer iframe {
+    max-width: 100%;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+ 
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+}
+ 
