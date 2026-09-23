@@ -1,0 +1,174 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #222;
+    background-color: #f5f7f9;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+header {
+    background-color: #4b5e7a;
+    color: #f3fbfb;
+    padding: 15px 30px;
+}
+
+.logo a {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    color: #f3fbfb;
+}
+
+
+#barra-arriba {
+    margin-top: 10px;
+}
+
+#barra-arriba .title {
+    display: none; 
+    
+}
+/*el menu principal*/
+
+.menu-principal {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-principal > li {
+    position: relative;
+}
+
+.menu-principal > li > a {
+    display: block;
+    padding: 10px 5px;
+    font-weight: 600;
+    color: #f3fbfb;
+    transition: color 0.2s ease;
+}
+
+.menu-principal > li > a:hover {
+    color: #5299d3;
+}
+
+
+
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5299d3;
+    min-width: 220px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.2s ease;
+    z-index: 10;
+    border-radius: 0 0 6px 6px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #f3fbfb;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #145a80;
+}
+
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    padding-left: 0%;
+}
+
+#panel-Admin {
+    background-color: #f3fbfb;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.title {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    color: #4b5e7a;
+    margin-bottom: 20px;
+}
+
+/* Botones dentro del panel */
+.btn-home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4b5e7a;
+    color: #f3fbfb;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.btn:hover {
+    background-color: #5299d3;
+}
+
+main > h2 {
+    font-family: "Source Serif 4", serif;
+    color: #4b5e7a;
+    background-color: #f3fbfb;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+footer {
+    background-color: #5299d3;
+    color: black;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+footer iframe {
+    max-width: 100%;
+    margin: 15px 0;
+    border-radius: 8px;
+}
