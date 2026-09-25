@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -12,8 +18,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
-
 
 
 
@@ -32,16 +36,15 @@ header {
     color: #f3fbfb;
 }
 
+/* menu */
 
-#barra-arriba {
+#barra-superior {
     margin-top: 10px;
 }
 
-#barra-arriba .title {
+#barra-superior .title {
     display: none; 
-    
 }
-/*el menu principal*/
 
 .menu-principal {
     list-style: none;
@@ -66,8 +69,7 @@ header {
     color: #5299d3;
 }
 
-
-
+/* Submenú desplegable */
 .dropdown-menu {
     list-style: none;
     position: absolute;
@@ -87,6 +89,7 @@ header {
 .dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 
 .dropdown-menu li a {
@@ -105,10 +108,9 @@ main {
     max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
-    padding-left: 0%;
 }
 
-#panel-Admin {
+#admin-panel {
     background-color: #f3fbfb;
     padding: 30px;
     border-radius: 8px;
@@ -124,7 +126,7 @@ main {
     margin-bottom: 20px;
 }
 
-/* Botones dentro del panel */
+
 .btn-home {
     display: flex;
     flex-wrap: wrap;
@@ -139,12 +141,17 @@ main {
     border-radius: 6px;
     font-weight: 600;
     text-align: center;
+    transition: background-color 0.2s ease;
 }
 
+.btn-secondary {
+    flex: 1 1 200px; 
+}
 
 .btn:hover {
     background-color: #5299d3;
 }
+
 
 main > h2 {
     font-family: "Source Serif 4", serif;
