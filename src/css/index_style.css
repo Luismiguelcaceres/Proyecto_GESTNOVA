@@ -1,5 +1,5 @@
 /* =========== GESTNOVA - Hoja de estilos ======================== */
- 
+
 * {
     margin: 0;
     padding: 0;
@@ -127,7 +127,12 @@ hr {
 /* ============ MAIN ============ */
  
 main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     max-width: 1000px;
+    width: 100%;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -156,6 +161,9 @@ main ul li a {
     font-weight: 600;
     transition: background-color 0.2s ease;
 }
+
+
+
  
 /* ============ FOOTER ============ */
  
@@ -171,9 +179,10 @@ footer p {
     font-size: 0.9rem;
 }
  
-footer iframe {
-    max-width: 100%;
-    margin: 15px 0;
-    border-radius: 8px;
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
 }
-
+ 
+ 
