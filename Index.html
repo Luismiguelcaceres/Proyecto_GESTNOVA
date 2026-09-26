@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/index_style.css">
+    <title>GESTNOVA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+     rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+     rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Syne+Tactile&display=swap" rel="stylesheet">
-    <title>inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Source+Serif+4:wght@400;600;700;800&display=swap"
+     rel="stylesheet">
+    
 </head>
 
     <body>
@@ -49,19 +51,78 @@
                             <li><a href="#cmd">Misión y visión</a></li>
                         </ul>
                     </li>
-                </ul>   
+
+                    <li class="nav-item">
+                        <a class="btn btn-sm text-white" style="background-color: #4b5e7a;"
+                        href="login.html">
+                        Iniciar Sesión</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="btn btn-sm text-white" style="background-color: #4b5e7a;"
+                        href="Register.html">
+                        Registrate</a>
+                    </li>
+                </ul>
             </div>
-            <hr>
 
         </nav>
     </header>
-    <main>  
-        <section>
-            <div>
-                <ul>
-                    <li><a href="Login.html">Iniciar sesión</a></li>
-                    <li><a href="Register.html">Registrarse</a></li> 
-                </ul>
+
+
+    <main>
+
+        <section id="inicio" class="text-white text-center py-5"
+                style="background: linear-gradient(135deg, #4b5e7a, #5299d3);"
+                aria-label="Presentación principal">
+
+            <div class="container py-4">
+                <h1 class="display-5 lead fst-italic fw-bold">
+                Bienvenido a GESTNOVA
+                </h1>
+                <p class="lead mx-auto" style="max-width: 700px;">
+                Gestión integral de proyectos de construcción, montaje y diseño.
+                </p>
+                <a href="#servicios" class="btn btn-lg mt-3 fw-bold" style="background-color: #f3fbfb; color: #076ac3;">
+                Conoce nuestros Servicios</a>
+            </div>
+        </section>
+
+        <section id="servicios" class="py-5" aria-labelledby="titulo-servicios">
+            <div class="container">
+                <h2 id="titulo-servicios" class="text-center fw-bold mb-5" style="color: #076ac3;">
+                Servicios
+                </h2>
+
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <article class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <h3 class="h5 card-title fw-bold" style="color: #5299d3;">Gestión de proyectos</h3>
+                                <p class="card-text text-secondary">
+                                En CMD nos especializamos en la gestión de proyectos de construcción,
+                                montaje y diseño, brindando un enfoque integral que abarca desde la
+                                planificación hasta la ejecución, asegurando resultados exitosos y
+                                eficientes para nuestros clientes.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <h3 class="h5 card-title fw-bold" style="color: #5299d3;">Nuestra oferta</h3>
+                                <p class="card-text text-secondary">
+                                Ofrecemos una amplia gama de servicios, incluyendo la gestión de proyectos
+                                de construcción, supervisión de obras, diseño arquitectónico y estructural,
+                                planificación y control de costos, así como la coordinación de equipos
+                                multidisciplinarios, garantizando calidad y seguridad en cada proyecto.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
             
             <hr>
