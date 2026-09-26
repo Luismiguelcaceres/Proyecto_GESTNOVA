@@ -1,110 +1,212 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <link rel="stylesheet" href="assets/css/stylesAdmin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
     <title>Panel administrativo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
+
 <body>
-    
-    <header>
-        <div class="logo">
-            <a href="#">GESTNOVA</a>
-        </div>
-        <section id="barra-superior">
-            <h2 class="title" style="font-size: 32px;">Barra de navegación</h2>
-            <div class="menu">
-                <ul class="menu-principal">
-                    <li class="dropdown">
-                        <a href="#maquinaria">Maquinaria ▾</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#maquinaria">Estado</a></li>
-                            <li><a href="#maquinaria">Preoperational</a></li>
-                            <li><a href="#maquinaria">Mantenimiento preventivo</a></li>
-                            <li><a href="#maquinaria">Mantenimiento correctivo</a></li>
-                            <li><a href="#maquinaria">Detalle de maquinaria</a></li>
-                            <li><a href="#maquinaria">Alertas</a></li>
-                            <li><a href="#maquinaria">Inventario</a></li>
-                        </ul>
+
+    <header class="d-flex justify-content-between align-items-center px-4 py-2 shadow-sm bg-white">
+        <a href="index.html">
+            <img src="assets/imagenes/logo.jpg" alt="Logo de la empresa" width="50" class="img-fluid">
+        </a>
+        <nav aria-label="Cuenta de usuario">
+            <ul class="d-flex align-items-center list-unstyled mb-0 gap-3">
+                <li class="text-secondary small">Administrador: Nombre</li>
+                <li><a href="login.html" class="btn btn-sm btn-outline-danger">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="d-flex">
+
+        <aside class="p-3 text-white" style="width: 250px; min-height: calc(100vh - 66px); background-color: #076ac3;"
+            aria-label="Menú de administración">
+            <nav aria-label="Módulos del sistema">
+                <ul class="nav nav-pills flex-column gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#modulo-usuarios">
+                            <i class="bi bi-people me-2"></i>Usuarios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#modulo-inventario">
+                            <i class="bi bi-box-seam me-2"></i>Inventario
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#modulo-maquinaria">
+                            <i class="bi bi-gear me-2"></i>Maquinaria
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#modulo-vehiculos">
+                            <i class="bi bi-truck me-2"></i>Vehículos
+                        </a>
                     </li>
 
-                    <li class="dropdown">
-                        <a href="#vehiculos">vehiculos ▾</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#vehiculos">Estado</a></li>
-                            <li><a href="#vehiculos">Preoperational</a></li>
-                            <li><a href="#vehiculos">Mantenimiento preventivo</a></li>
-                            <li><a href="#vehiculos">Mantenimiento correctivo</a></li>
-                            <li><a href="#vehiculos">Detalle de vehiculos</a></li>
-                            <li><a href="#vehiculos">Alertas</a></li>
-                            <li><a href="#vehiculos">Inventario</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#modulo-proyectos">
+                            <i class="bi bi-truck me-2"></i>proyectos
+                        </a>
                     </li>
-
-                    <li class="dropdown">
-                        <a href="#inventario">inventario ▾</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#inventario">Estado</a></li>
-                            <li><a href="#inventario">stock bajo</a></li>
-                            <li><a href="#inventario">stock alto</a></li>
-                            <li><a href="#inventario">Detalle de inventario</a></li>
-                            <li><a href="#inventario">Alertas</a></li>
-                            <li><a href="#inventario">Inventario</a></li>
-                            
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#reportes">conductores ▾</a>
-                        <ul class="dropdown-menu">  
-                            <li><a href="#reportes">información de conductores</a></li>
-                            <li><a href="#reportes">alertas de conductores</a></li>
-                            <li><a href="#reportes">detalle de conductores</a></li>
-                            <li><a href="#reportes">alertas de conductores</a></li>
-                            <li><a href="#reportes">reportes de conductores</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="dropdown">
-                        <a href="#configuracion">configuración ▾</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#configuracion">Perfil</a></li>
-                            <li><a href="#configuracion">Usuarios</a></li>
-                            <li><a href="#configuracion">Roles</a></li>
-                            <li><a href="#configuracion">Permisos</a></li>
-                            <li><a href="#configuracion">Notificaciones</a></li>
-                            <li><a href="#configuracion">Soporte técnico</a></li>
-                            <li><a href="#configuracion">Preguntas</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#modulo-reportes">
+                            <i class="bi bi-file-earmark-text me-2"></i>Reportes
+                        </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
+        </aside>
+
+    
+
+        <main class="flex-grow-1 p-4" style="background-color: #f3fbfb;">
+
+            <h1 class="fw-bold mb-4" style="color: #7cb7db;">Panel Administrativo</h1>
+            <section id="modulo-usuarios" class="card shadow-sm border-0 mb-4" aria-labelledby="titulo-usuarios">
+                <div class="card-body">
+                    <h2 id="titulo-usuarios" class="h5 fw-bold mb-3">Gestión de Usuarios</h2>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped align-middle mb-0">
+                            <caption>Listado de usuarios registrados</caption>
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Rol</th>
+                                    <th scope="col">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <center>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="" class="btn btn-outline-primary rounded-pill px-3">
+                Solicitudes de servicios <i class="bi bi-arrow-right-circle ms-1"></i>
+            </a>
+        
+            <a href="" class="btn btn-light border rounded-pill px-3">
+                Seguimiento de servicios
+            </a>
         </div>
-    <main>
-        <section id="admin-panel" class="content admin">
-            <h2 class="title" style="font-size: 32px;">Panel de Administrativo</h2>
-            <div class="btn-home">
-                <a href="#" class="btn btn-secondary">Seguimientos</a> <br>
-                <a href="#" class="btn btn-secondary">Gestión documental</a> <br>
-                <a href="#" class="btn btn-secondary">Gestion operativa</a> <br>
-                <a href="#" class="btn btn-secondary">Gestión de proyectos</a> <br>
-                <a href="#" class="btn btn-secondary">Gestión de usuarios</a> <br>
-                <a href="#" class="btn btn-secondary">Reportes</a> <br>
-            </div>
-        </section>
+            </center>
+            <section id="modulo-inventario" class="card shadow-sm border-0 mb-4" aria-labelledby="titulo-inventario">
+                <div class="card-body">
+                    <h2 id="titulo-inventario" class="h5 fw-bold mb-3">Gestión de Inventario</h2>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped align-middle mb-0">
+                            <caption>Listado de repuestos e insumos en inventario</caption>
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">Código</th>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
 
-    <h2>Este apartado es para las estadisticas</h2>
+            <section id="modulo-maquinaria" class="card shadow-sm border-0 mb-4" aria-labelledby="titulo-maquinaria">
+                <div class="card-body">
+                    <h2 id="titulo-maquinaria" class="h5 fw-bold mb-3">Gestión de Maquinaria</h2>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped align-middle mb-0">
+                            <caption>Estado actual de la maquinaria</caption>
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">Codigo</th>
+                                    <th scope="col">Maquinaria</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Última revisión</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
 
-<footer>
-    <p>Contacto: Contacto: contacto@cmdproyectos.com.co</p>
-    <p>Telefono:  (8) 772 8631</p>
-    <p>Dirección:Calle 54 No 11B-05 Parque Industrial Sogamoso</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d862755.395344158!2d-73.48427132656253!3d5.751463000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a462f7fb203f5%3A0x59ff5c2c98925f4b!2sCompania%20de%20Montajes%2C%20Diseno%20y%20Construccion!5e1!3m2!1ses-419!2sus!4v1788488903629!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    <p>horarios: Lunes a viernes de 8:00 AM a 6:00 PM</p>
-    <p>&copy; 2026 GESTNOVA Todos los derechos reservados.</p>
-</footer>
+    
+            <section id="modulo-vehiculos" class="card shadow-sm border-0 mb-4" aria-labelledby="titulo-vehiculos">
+                <div class="card-body">
+                    <h2 id="titulo-vehiculos" class="h5 fw-bold mb-3">Gestión de Vehículos</h2>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped align-middle mb-0">
+                            <caption>Estado actual de la flota de vehículos</caption>
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">Placa</th>
+                                    <th scope="col">Vehiculo</th>
+                                    <th scope="col">Conductor asignado</th>
+                                    <th scope="col">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
 
-    </header>
+            <section id="modulo de proyectos" class="card shadow-sm border-0 mb-4" aria-labelledby="titulo-proyectos">
+                <div class="card-body">
+                    <h2 id="titulo-proyectos" class="h5 fw-bold mb-3">Estado de proyectos de la empresa cmd</h2>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped align-middle mb-0">
+                            <caption>Estado actual de los proyectos dentro de la empresa</caption>
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col">o</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="modulo-reportes" class="card shadow-sm border-0 mb-4" aria-labelledby="titulo-reportes">
+                <div class="card-body">
+                    <h2 id="titulo-reportes" class="h5 fw-bold mb-2">Reportes</h2>
+                    <p class="text-secondary mb-0">Resumen general de maquinaria, vehículos e inventario de la empresa cmd.</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <center>
+    <footer class="p-4">
+        <p>Contacto: contacto@cmdproyectos.com.co</p>
+        <p>Telefono: (8) 772 8631</p>
+        <p>Dirección: Calle 54 No 11B-05 Parque Industrial Sogamoso</p>
+        <p>Horarios: Lunes a viernes de 8:00 AM a 6:00 PM</p>
+        <p>&copy; 2026 GESTNOVA Todos los derechos reservados.</p>
+    </footer>
+    </center>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>

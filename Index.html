@@ -14,55 +14,41 @@
      rel="stylesheet">
     
 </head>
-<body>
 
-    <header class="d-flex justify-content-between align-items-center px-4 py-2 shadow-sm bg-white sticky-top">
+    <body>
+        <header> 
+            <nav>
+                <img class="slide active" src="assets/imagenes/logo.jpg" height="50" width="100" alt="Imagen 1">
+            <div class="head-content">
+                <h1 class="title">GESTNOVA</h1>
+                <p class="hero-text">Sistema de gestión documental diseñado para digitalizar, 
+                    organizar y asegurar los archivos físicos de la empresa CMD.</p>
+            </div>
 
-        <a href="index.html">
-        <img src="assets/imagenes/logo.jpg" alt="Logo GESTNOVA" width="200" class="img-fluid">
-        </a>
+                <div>
+                    <ul class="menu-principal">
+                        <li><a href="#">Inicio</a></li>
 
-        <!-- navbar-expand-lg: el menú se colapsa por debajo de 992px -->
-        <nav class="navbar navbar-expand-lg p-0" aria-label="Menú principal">
+                            <li class="dropdown">
+                                <a class="#">Servicios</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a href="#servicios">Solicitud de servicios</a></li>
+                            </ul>    
+                            
+                            <li class="dropdown">
+                            <a href="#contacto">Contacto ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#contacto">Nuestra empresa</a></li>
+                                <li><a href="#contacto">Nuestro equipo</a></li>
+                                <li><a href="#contacto">Sedes y contacto</a></li>
+                            </ul>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton"
-                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Servicios
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Solicitud de servicios</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton"
-                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Contacto
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Nuestra Empresa</a></li>
-                            <li><a class="dropdown-item" href="#">Nuestro Equipo</a></li>
-                            <li><a class="dropdown-item" href="#">Sedes y Contacto</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton"
-                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        CMD
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Quienes Somos</a></li>
-                            <li><a class="dropdown-item" href="#">Mision y Vision</a></li>
+                        </li>
+                        <li class="dropdown">
+                        <a href="#cmd">CMD ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#cmd">Quiénes somos</a></li>
+                            <li><a href="#cmd">Misión y visión</a></li>
                         </ul>
                     </li>
 
@@ -138,63 +124,31 @@
                     </div>
                 </div>
             </div>
-        </section>
+            
+            <hr>
 
-        <section id="nosotros" class="py-5" aria-labelledby="titulo-nosotros">
-            <div class="container">
-                <h2 id="titulo-nosotros" class="text-center fw-bold mb-5" style="color: #076ac3;">
-                Sobre Nosotros
-                </h2>
+            <div>
+                    <h2>Servicios</h2>
+                    <p class="hero-text">En CMD, nos especializamos en la gestión de proyectos de construcción, montaje y diseño,
+                    brindando un enfoque integral que abarca desde la planificación hasta la ejecución, 
+                    asegurando resultados exitosos y eficientes para nuestros clientes.</p>
+                    <br>
+                    <p class="hero-text">Ofrecemos una amplia gama de servicios, incluyendo la gestión de proyectos de construcción, 
+                    supervisión de obras, diseño arquitectónico y estructural, planificación y control de costos, 
+                    así como la coordinación de equipos multidisciplinarios. Nuestro objetivo es garantizar que cada proyecto se realice de manera eficiente, cumpliendo con los estándares de calidad y seguridad establecidos.</p> 
 
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <div class="col">
-                        <article class="card h-100 shadow-sm border-0">
-                            <div class="card-body">
-                        <div class="col-md-6">
-                            <h3 class="fw-bold" style="color: #5299d3;">Misión</h3>
-                             <p class="card-text text-secondary">
-                            Gestionar proyectos de construcción, montaje y diseño con un enfoque integral,
-                            garantizando eficiencia, calidad y seguridad en cada etapa.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </div>              
+            </section>
+        </main>
 
-                    <div class="col">
-                        <article class="card h-100 shadow-sm border-0">
-                            <div class="card-body">
-                        <div class="col-md-6">
-                            <h3 class="fw-bold" style="color: #5299d3;">Visión</h3>
-                            <p class="card-text text-secondary">
-                            Ser referentes en la gestión de proyectos de construcción en la región,
-                            reconocidos por la calidad y confiabilidad de nuestro trabajo.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="py-5 text-white" style="background-color: #4b5e7a;"
-        aria-labelledby="titulo-contacto">
-
-            <div class="container text-center">
-                <h2 id="titulo-contacto" class="fw-bold mb-4">Contáctanos</h2>
-                <address class="mb-0">
-                Correo: <a href="mailto:contacto@cmdproyectos.com.co" class="text-white">contacto@cmdproyectos.com.co</a><br>
-                Teléfono: <a href="tel:+578772863" class="text-white">(8) 772 8631</a><br>
-                Dirección: Calle 54 No 11B-05, Parque Industrial Sogamoso<br>
-                Horario: Lunes a viernes de 8:00 AM a 6:00 PM
-                </address>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="text-center py-4 text-white-50" style="background-color: #076ac3;">
-        <p class="mb-2">&copy; 2026 GESTNOVA. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        <hr>
+        <!-- ============ PIE DE PÁGINA ============ -->
+            <footer>
+                    <p>Correo: contacto@cmdproyectos.com.co</p>
+                    <p>Telefono:  (8) 772 8631</p>
+                    <p>Dirección:Calle 54 No 11B-05 Parque Industrial Sogamoso</p>
+                    <p>horarios: Lunes a viernes de 8:00 AM a 6:00 PM</p>
+                    <p>&copy; 2026 GESTNOVA Todos los derechos reservados.</p>
+            </footer>
+    </body>
+    </html>
