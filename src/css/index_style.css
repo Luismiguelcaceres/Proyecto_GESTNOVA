@@ -1,179 +1,193 @@
-/* =========== GESTNOVA - Hoja de estilos ======================== */
- 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --fuente-titulos: 'Source Serif 4', Georgia, 'Times New Roman';
+    --fuente-texto: 'Roboto', sans-serif;
+
+    /* Paleta */
+    --azul: #076ac3;          
+    --claro: #f3fbfb;     
+    --pizarra: #4B5E7A;       
+    --celeste: #5299D3;      
+
+    --azul-oscuro: #055399;   
+    --fondo-oscuro: #0b1626;  
 }
- 
+
 body {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    color: #black;
-    background-color: #f5f7f9;
+    font-family: var(--fuente-texto);
+    font-weight: 400;
     line-height: 1.6;
+    color: var(--claro);
+
+    /* Fondo de toda la página: imagen con capa oscura suave (desvanecida) */
+    background-color: var(--fondo-oscuro);
+    background-image:
+        /* resplandores suaves de la paleta (efecto desvanecido) */
+        radial-gradient(circle at 15% 10%, rgba(82, 153, 211, .35), transparent 55%),
+        radial-gradient(circle at 85% 85%, rgba(7, 106, 195, .30), transparent 55%),
+        /* capa oscura sobre la foto */
+        linear-gradient(rgba(8, 16, 28, .72), rgba(8, 16, 28, .72)),
+        /* foto de fondo: la ruta es relativa a ESTE archivo css */
+        url('../imagenes/fondo-hero.jpg'),
+        /* degradado base: se ve si la foto no carga */
+        linear-gradient(180deg, #0b1626 0%, #14304f 55%, #0b1626 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
- 
-a {
+
+/* Títulos: Source Serif 4 */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.marca-texto {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+}
+
+/* Texto: Roboto */
+.btn, .nav-link, .dropdown-item, .hero-texto {
+    font-family: var(--fuente-texto);
+}
+
+/* ========== HEADER ========== */
+header { background-color: var(--claro); }
+.marca img { width: 120px; }
+.marca-texto { color: var(--pizarra); text-decoration: none; }
+
+.navbar .nav-link { color: var(--pizarra); }
+.navbar .nav-link:hover { color: var(--azul); }
+
+.btn-nav {
+    background-color: var(--azul);
+    border: 1px solid var(--azul);
+    color: #fff;
+    width: 100%;
+}
+.btn-nav:hover { background-color: var(--azul-oscuro); color: #fff; }
+
+/* Tarjetas de iniciar sesión / registrarse */
+.acceso {
+    display: block;
+    height: 100%;
+    padding: 1.75rem 1rem;
     text-decoration: none;
-    color: inherit;
+    color: var(--claro);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    background-color: #4b5e7a63;
+    border: 1px solid rgba(243, 251, 251, .25);
+    border-radius: 1rem;
+    box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .35);
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
 }
- 
-/* ============ HEADER / NAV ============ */
- 
-header {
-    background-color: #4b5e7a;
-    color: #f3fbfb;
+.acceso:hover {
+    color: var(--claro);
+    background-color: #5a6f8f;
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .45);
 }
- 
-nav {
+
+.caja-texto {
+    padding: 1.5rem;
+    background-color: #4b5e7a63;
+    border: 1px solid rgba(243, 251, 251, .18);
+    border-radius: 1rem;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.acceso-icono {
+    font-size: 1.75rem;
+    width: 2.6em;
+    height: 2.6em;
+    margin: 0 auto .75rem;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
-}
- 
-.head-content {
-    flex: 1;
-    text-align: center;
-    padding: 0 20px;
-}
- 
-.title {
-    font-family: "Source Serif 4", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-    color: #f3fbfb;
-}
-
-.hero-text {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
-
-/* Menú principal */
-.menu-principal {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
- 
-.menu-principal > li {
-    position: relative;
-}
- 
-.menu-principal > li > a {
-    display: block;
-    padding: 10px 5px;
-    font-weight: 600;
-    transition: color 0.2s ease;
-}
- 
-.menu-principal > li > a:hover {
-    color: #5299d3;
-}
- 
-/* Submenú desplegable */
-.dropdown-menu {
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #5299d3;
-    min-width: 200px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-8px);
-    transition: all 0.2s ease;
-    z-index: 10;
-    border-radius: 0 0 6px 6px;
-}
- 
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
- 
-.dropdown-menu li a {
-    display: block;
-    padding: 10px 15px;
-    white-space: nowrap;
-}
- 
-.dropdown-menu li a:hover {
-    background-color: #145a80;
-}
- 
-hr {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 10px;
-}
- 
-/* ============ MAIN ============ */
- 
-main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
- 
-main section > div {
-    background-color: #f3fbfb;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    margin-bottom: 25px;
-}
- 
-main ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
     justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(82, 153, 211, .28);
+    border: 1px solid rgba(82, 153, 211, .6);
+    color: var(--claro);
+    transition: background-color .2s ease, transform .2s ease;
 }
- 
-main ul li a {
-    display: inline-block;
-    background-color: #4b5e7a;
-    color: #f3fbfb;
-    padding: 10px 25px;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
-}
- 
-/* ============ FOOTER ============ */
- 
-footer {
-    background-color: #5299d3   ;
-    color: black;
-    text-align: center;
-    padding: 30px 20px;
-}
- 
-footer p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-}
- 
-footer iframe {
-    max-width: 100%;
-    margin: 15px 0;
-    border-radius: 8px;
+.acceso:hover .acceso-icono {
+    background-color: var(--celeste);
+    transform: translateY(-3px);
 }
 
+.btn-explorar {
+    background-color: rgba(0, 0, 0, .45);
+    border: 2px solid var(--claro);
+    color: var(--claro);
+    border-radius: .6rem;
+    padding: .7rem 2rem;
+    font-size: 1.05rem;
+    width: 100%;
+}
+
+.btn-explorar:hover { background-color: var(--claro); color: var(--azul); }
+
+/* ========== FOOTER ========== */
+.footer-gestnova {
+    background-color: var(--pizarra);
+    color: var(--claro);
+}
+
+/* ========== WHATSAPP ========== */
+.whatsapp {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #25d366;
+    border: 2px solid rgba(255, 255, 255, .8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    z-index: 1030;
+}
+
+/* ========== BREAKPOINTS DE BOOTSTRAP ========== */
+
+/* sm: ≥ 576px */
+@media (min-width: 576px) {
+    .hero h1 { font-size: 2rem; }
+    .marca img { width: 140px; }
+    .btn-explorar { width: auto; }
+}
+
+/* md: ≥ 768px */
+@media (min-width: 768px) {
+    body { background-attachment: fixed; }
+    .hero h1 { font-size: 2.4rem; }
+    .hero-texto { font-size: 1.05rem; text-align: justify; }
+    .marca img { width: 170px; }
+    .acceso-icono { font-size: 2rem; }
+    .whatsapp { width: 54px; height: 54px; right: 20px; bottom: 20px; }
+}
+
+/* lg: ≥ 992px (el menú se expande) */
+@media (min-width: 992px) {
+    .hero h1 { font-size: 2.8rem; }
+    .hero-texto { font-size: 1.1rem; }
+    .acceso-icono { font-size: 2.25rem; }
+    .btn-nav { width: auto; }
+}
+
+/* xl: ≥ 1200px */
+@media (min-width: 1200px) {
+    .hero h1 { font-size: 3.2rem; }
+    .hero-texto { font-size: 1.15rem; }
+    .acceso-icono { font-size: 2.5rem; }
+}
+
+/* xxl: ≥ 1400px */
+@media (min-width: 1400px) {
+    .hero h1 { font-size: 3.6rem; }
+    .hero-texto { font-size: 1.25rem; }
+}
