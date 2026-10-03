@@ -1,77 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Inicia sesión en el panel de la empresa.">
-    <link rel="stylesheet" href="src/css/login_style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-     rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-     rel="stylesheet">
-    <title>Iniciar Sesión</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link href="src/css/login_style.css" rel="stylesheet">
 </head>
 
-    <header>
-        <a href="Index.html">
-        <center>
-            <img src="src/images/logo.jpg.jpeg" width="300" height="100" alt="Logo de la empresa">
-        </center>     
-        </a>  
-    </header>
+<body>
 
+<div class="container">
 
-    <article>
-        <main>
-            <section aria-labelledby="titulo-login">
-                <h1 id="titulo-login" style="color: black" >Iniciar Sesión</h1>
-                <!-- form: define el formulario. action indica a dónde se envían los datos -->
-                <form action="admin.html" method="POST">   
-                <!-- fieldset agrupa campos; legend describe el grupo -->
-                    <fieldset>
-                            <div class="container" id="container">
-                                
-                                <div class="form-panel signin-panel">
-                                        <p class="hint">Bienvenido inicia Sesión </p>
+  <div class="form-panel signin-panel">
+    <form>
+      <h1>Iniciar Sesión</h1>
+      <input class="field" type="email" placeholder="Correo electrónico" required>
+      <input class="field" type="password" placeholder="Contraseña" required>
+      <a class="forgot" href="#">¿Olvidaste tu contraseña?</a>
+      <button class="btn" type="submit">Iniciar Sesión</button>
+    </form>
+  </div>
 
-                                        <label for="email">Correo electrónico</label>
-                                        <input class="field" type="email" id="email" placeholder="Correo electrónico" required>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel">
+        <h2>¡Hola!</h2>
+        <p>Crea tu cuenta y descubre todo lo que tenemos para ti.</p>
+        <a class="btn-ghost" href="Register.html">Registrar</a>
+      </div>
+    </div>
+  </div>
 
-                                        <label for="password">Contraseña</label>
-                                        <input class="field" type="password" id="password" placeholder="Contraseña" required>
-                                        
-                                        <a class="forgot" href="#">¿Olvidaste tu contraseña?</a>
-                                        
-                                        <button class="btn" type="submit">Iniciar Sesión</button>
-                                        <li class="signup-link">¿No tienes cuenta? <a href="Register.html">Regístrate</a></li>
-                                </div>
+</div>
 
-                            </div>
-                    </fieldset>
-                </form>
-            </section>     
-        </main>
-    </article>
-
-    <section id="contacto" class="py-5 text-black" style="background-color: #5299d3;"
-            aria-labelledby="titulo-contacto">
-
-                <div class="container text-center">
-                    <h2 id="titulo-contacto" class="fw-bold mb-4">Contáctanos</h2>
-                    <address class="mb-0">
-                    Correo: <a href="mailto:contacto@cmdproyectos.com.co" class="text-black">contacto@cmdproyectos.com.co</a><br>
-                    Teléfono: <a href="tel:+578772863" class="text-black">(8) 772 8631</a><br>
-                    Dirección: Calle 54 No 11B-05, Parque Industrial Sogamoso<br>
-                    Horario: Lunes a viernes de 8:00 AM a 6:00 PM
-                    </address>
-                </div>
-    </section>
-
-
-        <footer class="text-center py-4 text-white-50" style="background-color: #4b5e7a;">
-            <p class="mb-2">&copy; 2026 GESTNOVA. Todos los derechos reservados.</p>
-        </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+</body>
 </html>
