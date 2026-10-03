@@ -114,6 +114,7 @@ a.forgot{
 
 .signin-panel{ left: 0; z-index: 2; }
 
+/* ---------- OVERLAY ---------- */
 .overlay-container{
   position: absolute;
   top: 0;
@@ -188,7 +189,7 @@ a.forgot{
 }
 .btn-ghost:hover{ background: #fff; color: var(--grad-2); }
 
-/* ---------- break point ---------- */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 700px){
   .container{ min-height: 0; display: flex; flex-direction: column; }
   .form-panel{ position: relative; width: 100%; height: auto; left: 0 !important; }

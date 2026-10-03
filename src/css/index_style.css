@@ -1,17 +1,27 @@
+/* ========== TIPOGRAFÍA ========== */
 :root {
-    --fuente-titulos: 'Source Serif 4', Georgia, 'Times New Roman';
-    --fuente-texto: 'Roboto', sans-serif;
+    --fuente-titulos: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --fuente-texto: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
 
     /* Paleta */
-    --azul: #076ac3;          
-    --claro: #f3fbfb;     
-    --pizarra: #4B5E7A;       
+    --azul: #076ac3;         
+    --claro: #f3fbfb;         
+    --pizarra: #4B5E7A;      
     --celeste: #5299D3;      
 
     --azul-oscuro: #055399;   
     --fondo-oscuro: #0b1626;  
 }
 
+/* Títulos: Source Serif 4 */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.marca-texto {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+}
+
+/* Textos generales: Roboto */
 body {
     font-family: var(--fuente-texto);
     font-weight: 400;
@@ -35,20 +45,8 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Títulos: Source Serif 4 */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
-.marca-texto {
-    font-family: var(--fuente-titulos);
-    font-weight: 700;
-}
-
-/* Texto: Roboto */
-.btn, .nav-link, .dropdown-item, .hero-texto {
-    font-family: var(--fuente-texto);
-}
-
 /* ========== HEADER ========== */
+
 header { background-color: var(--claro); }
 .marca img { width: 120px; }
 .marca-texto { color: var(--pizarra); text-decoration: none; }
@@ -64,7 +62,8 @@ header { background-color: var(--claro); }
 }
 .btn-nav:hover { background-color: var(--azul-oscuro); color: #fff; }
 
-/* Tarjetas de iniciar sesión / registrarse */
+/* Tarjetas de iniciar sesión / registrarse*/
+
 .acceso {
     display: block;
     height: 100%;
@@ -87,6 +86,7 @@ header { background-color: var(--claro); }
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, .45);
 }
 
+/* Cajas de los textos*/
 .caja-texto {
     padding: 1.5rem;
     background-color: #4b5e7a63;
@@ -115,6 +115,7 @@ header { background-color: var(--claro); }
     transform: translateY(-3px);
 }
 
+/* Botón explorar */
 .btn-explorar {
     background-color: rgba(0, 0, 0, .45);
     border: 2px solid var(--claro);
