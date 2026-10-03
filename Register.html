@@ -4,59 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Crea una nueva cuenta en el panel de la empresa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+  
     <link rel="stylesheet" href="assets/css/stylesRegister.css">
+
+  
+    <style>
+        body { display: block; }
+        header, footer { text-align: center; padding: 16px; }
+        main { display: flex; align-items: center; justify-content: center; min-height: 70vh; padding: 24px; }
+    </style>
+
     <title>Crear cuenta</title>
 </head>
 <body>
     <header>
         <a href="Index.html">
-        <img src="src/images/logo.jpg.jpeg" width="100" height="50" alt="Logo de la empresa">
+            <img src="src/images/logo.jpg.jpeg" width="100" height="50" alt="Logo de la empresa">
         </a>
     </header>
-<main>
-    <section aria-labelledby="titulo-register">
-        <h1 id="titulo-register">Crear Cuenta</h1>
-    
 
-            <fieldset>
-                <legend>Credenciales para crear cuenta</legend>    
-                    <!-- SIGN UP -->
-                    <div class="form-panel signup-panel">
-                        <div class="socials">
-                                    <h3>con</h3>
-                                    <a href="#" aria-label="Google">G</a>
-                                </div>
-                                <p class="hint">o regístrate con tu correo</p>
-                                
-                                <label for="fullName">Nombre completo</label>
-                                <input class="field" type="text" id="fullName" placeholder="Nombre completo" required>
-                                <br>
-                                
-                                <label for="email">Correo electrónico</label>
-                                <input class="field" type="email" id="email" placeholder="Correo electrónico" required>
-                                <br>
+    <main>
+        <div class="container">
 
-                                <label for="signupPassword">Contraseña</label>
-                                <input class="field" type="password" id="signupPassword" placeholder="Contraseña" required>
-                                <br>
+            <div class="form-panel signin-panel">
+                <form action="#" method="POST">
+                    <h1 id="titulo-register">Crear Cuenta</h1>
 
-                                <button class="btn" type="submit" style="margin-top:4px;">Registrar</button>
-                            </form>
-                        </div>
-                    
+                    <fieldset style="border:0; width:100%; display:flex; flex-direction:column; align-items:center;">
+                        <legend class="visually-hidden">Credenciales para crear cuenta</legend>
+
+                        <input class="field" type="text" id="fullName" name="fullName" placeholder="Nombre completo" required>
+                        <input class="field" type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                        <input class="field" type="password" id="signupPassword" name="signupPassword" placeholder="Contraseña" required>
+                    </fieldset>
+
+                    <button class="btn" type="submit">Registrar</button>
+                </form>
+            </div>
+
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel">
+                        <h2>¡Bienvenido de nuevo!</h2>
+                        <p>¿Ya tienes una cuenta? Inicia sesión y continúa gestionando tu proyecto.</p>
+                        <a class="btn-ghost" href="login.html">Iniciar Sesión</a>
                     </div>
-            </fieldset>
-        </form>     
-    </section>
-</main>
+                </div>
+            </div>
 
-   <hr>
-    <!-- ============ PIE DE PÁGINA ============ -->
-        <footer>
-                <p>Contacto: Contacto: contacto@cmdproyectos.com.co</p>
-                <p>Telefono:  (8) 772 8631</p>
-                <p>Dirección:Calle 54 No 11B-05 Parque Industrial Sogamoso</p>
-                <p>&copy; 2026 GESTNOVA Todos los derechos reservados.</p>
-        </footer>   
+        </div>
+    </main>
+
+    <footer>
+        <p style="margin:0;">&copy;  GESTNOVA Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
