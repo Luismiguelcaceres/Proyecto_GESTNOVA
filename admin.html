@@ -20,6 +20,7 @@
             <ul class="d-flex align-items-center list-unstyled mb-0 gap-3">
                 <li class="text-secondary small">Administrador: Nombre</li>
                 <li><a href="login.html" class="btn btn-sm btn-outline-danger">Cerrar sesión</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -102,9 +103,19 @@
             </a>
         </div>
             </center>
+
+            <!-- INVENTARIO: formulario + tabla + resumen (funciona con admin.js) -->
             <section id="modulo-inventario" class="card shadow-sm border-0 mb-4" aria-labelledby="titulo-inventario">
                 <div class="card-body">
                     <h2 id="titulo-inventario" class="h5 fw-bold mb-3">Gestión de Inventario</h2>
+
+                    <div class="row g-2 mb-3">
+                        <div class="col-md-3"><input type="text" id="codigo" class="form-control" placeholder="Código"></div>
+                        <div class="col-md-4"><input type="text" id="producto" class="form-control" placeholder="Producto"></div>
+                        <div class="col-md-3"><input type="number" id="cantidad" class="form-control" placeholder="Cantidad"></div>
+                        <div class="col-md-2"><button id="btnAgregar" class="btn btn-primary w-100">Agregar</button></div>
+                    </div>
+
                     <div class="table-responsive">
                         <table class="table table-hover table-striped align-middle mb-0">
                             <caption>Listado de repuestos e insumos en inventario</caption>
@@ -116,10 +127,12 @@
                                     <th scope="col">Estado</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="tablaInventario">
                             </tbody>
                         </table>
                     </div>
+
+                    <p id="resumen" class="mt-3 mb-0"></p>
                 </div>
             </section>
 
@@ -166,7 +179,7 @@
                 </div>
             </section>
 
-            <section id="modulo de proyectos" class="card shadow-sm border-0 mb-4" aria-labelledby="titulo-proyectos">
+            <section id="modulo-proyectos" class="card shadow-sm border-0 mb-4" aria-labelledby="titulo-proyectos">
                 <div class="card-body">
                     <h2 id="titulo-proyectos" class="h5 fw-bold mb-3">Estado de proyectos de la empresa cmd</h2>
                     <div class="table-responsive">
@@ -207,6 +220,7 @@
     </center>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="Admin.js"></script>
 
 </body>
 </html>

@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GESTNOVA</title>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTNOVA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +18,7 @@
 
     <link href="src/css/index_style.css" rel="stylesheet">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
 
     <header class="d-flex justify-content-between align-items-center px-4 py-2 shadow-sm sticky-top">
@@ -33,7 +40,7 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="menuServicios"
-                           role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
                         <ul class="dropdown-menu" aria-labelledby="menuServicios">
                             <li><a class="dropdown-item" href="#">Conoce nuestros servicios</a></li>
                             <li><a class="dropdown-item" href="#">Solicitud de servicios</a></li>
@@ -42,7 +49,7 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="menuContacto"
-                           role="button" data-bs-toggle="dropdown" aria-expanded="false">Contacto</a>
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">Contacto</a>
                         <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="menuContacto">
                             <li><a class="dropdown-item" href="#">Nuestra Empresa</a></li>
                             <li><a class="dropdown-item" href="#">Nuestro Equipo</a></li>
@@ -55,6 +62,13 @@
         </nav>
     </header>
 
+    <!-- CARRUSEL: rutas relativas (sin "/" inicial) -->
+    <section aria-label="Galería de imágenes">
+        <img class="mySlides" src="assets/imagenes/cmdimg1.jpg" alt="CMD imagen 1" style="width:100%">
+        <img class="mySlides" src="assets/imagenes/cmdimg2.jpg" alt="CMD imagen 2" style="width:100%">
+        <img class="mySlides" src="assets/imagenes/cmdimg3.jpg" alt="CMD imagen 3" style="width:100%">
+        <img class="mySlides" src="assets/imagenes/cmdimg4.jpg" alt="CMD imagen 4" style="width:100%">
+    </section>
 
     <main class="flex-grow-1">
 
@@ -67,20 +81,20 @@
                 <div class="row g-4 text-start mb-5">
                     <div class="col-12 col-md-6">
                         <div class="caja-texto h-100">
-                        <p class="hero-texto mb-0">
-                            Somos una empresa líder dedicada al desarrollo e implementación de soluciones
-                            tecnológicas integrales para la gestión, geolocalización y control en la
-                            construcción, apoyando la planificación, ejecución y éxito de cada proyecto.
-                        </p>
+                            <p class="hero-texto mb-0">
+                                Somos una empresa líder dedicada al desarrollo e implementación de soluciones
+                                tecnológicas integrales para la gestión, geolocalización y control en la
+                                construcción, apoyando la planificación, ejecución y éxito de cada proyecto.
+                            </p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="caja-texto h-100">
-                        <p class="hero-texto mb-0">
-                            Desarrollamos aplicaciones, sistemas y software personalizados de vanguardia,
-                            con soluciones digitales pensadas para hacer crecer y modernizar cada empresa
-                            con la que trabajamos.
-                        </p>
+                            <p class="hero-texto mb-0">
+                                Desarrollamos aplicaciones, sistemas y software personalizados de vanguardia,
+                                con soluciones digitales pensadas para hacer crecer y modernizar cada empresa
+                                con la que trabajamos.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -114,6 +128,13 @@
         <i class="bi bi-whatsapp"></i>
     </a>
 
+    <a href="https://www.facebook.com/cmdsas" class="facebook" target="_blank" rel="noopener" aria-label="Contactanos por facebook">
+        <i class="bi bi-facebook"></i>
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="JS/index.js"></script>
 </body>
 </html>
