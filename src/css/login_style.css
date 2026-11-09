@@ -208,10 +208,17 @@ body.dark-mode .field {
   color: #f4f7fb;
 }
 
-body.dark-mode .field::placeholder { color: #a0aec0; }
-body.dark-mode .field:focus { background: #243044; }
+body.dark-mode .field::placeholder { 
+  color: #a0aec0; 
+}
 
-body.dark-mode .overlay { background: #243044; }
+body.dark-mode .field:focus { 
+  background: #243044; 
+}
+
+body.dark-mode .overlay { 
+  background: #243044; 
+}
 
 body.dark-mode .btn-tema {
   background: #2c3e55;
