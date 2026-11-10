@@ -25,6 +25,8 @@ body{
   padding: 24px;
 }
 
+
+
 .container{
   position: relative;
   width: 100%;
@@ -36,7 +38,6 @@ body{
   overflow: hidden;
 }
 
-/* ---------- FORM PANEL ---------- */
 .form-panel{
   position: absolute;
   top: 0;
@@ -66,12 +67,9 @@ body{
   color: var(--grad-3);
 }
 
-a.forgot{
-    align-self:center;
-}
-
 .field{
   width: 100%;
+  min-height: 46px;
   padding: 13px 16px;
   margin-bottom: 12px;
   border: 1px solid var(--line);
@@ -87,7 +85,7 @@ a.forgot{
 .field:focus{ border-color: var(--grad-2); background: #fff; }
 
 .forgot{
-  align-self: flex-end;
+  align-self: center;
   font-size: 12px;
   color: var(--muted);
   text-decoration: none;
@@ -114,7 +112,6 @@ a.forgot{
 
 .signin-panel{ left: 0; z-index: 2; }
 
-/* ---------- OVERLAY ---------- */
 .overlay-container{
   position: absolute;
   top: 0;
@@ -130,18 +127,10 @@ a.forgot{
   height: 100%;
   width: 100%;
   background: var(--grad-3);
-  background-size: 200% 200%;
-  animation: hueShift 10s ease infinite;
   color: #fff;
   display:flex;
   align-items:center;
   justify-content:center;
-}
-
-@keyframes hueShift{
-  0%{ background-position: 0% 50%; }
-  50%{ background-position: 100% 50%; }
-  100%{ background-position: 0% 50%; }
 }
 
 .overlay-panel{
@@ -189,6 +178,7 @@ a.forgot{
 }
 .btn-ghost:hover{ background: #fff; color: var(--grad-2); }
 
+<<<<<<< HEAD
 /* ========== FOOTER ========== */
 .site-footer {
   position: fixed;
@@ -218,12 +208,63 @@ a.forgot{
 }
 
 /*--------- RESPONSIVE ---------- */
+=======
+.btn-tema {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 30;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--grad-3);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode {
+  --ink: #f4f7fb;
+  --muted: #90cdf4;
+  --line: #3d5168;
+  --paper: #1e2833;
+  --bg: #12181f;
+}
+
+body.dark-mode .field {
+  background: #2a3848;
+  color: #f4f7fb;
+}
+
+body.dark-mode .field::placeholder { 
+  color: #a0aec0; 
+}
+
+body.dark-mode .field:focus { 
+  background: #243044; 
+}
+
+body.dark-mode .overlay { 
+  background: #243044; 
+}
+
+body.dark-mode .btn-tema {
+  background: #2c3e55;
+  border-color: #718096;
+  color: #f6e05e;
+}
+>>>>>>> 952aea481618a29bdf0a691929ea31f1580f912d
 
 @media (max-width: 700px){
   .container{ min-height: 0; display: flex; flex-direction: column; }
   .form-panel{ position: relative; width: 100%; height: auto; left: 0 !important; }
   .overlay-container{ position: relative; width: 100%; left: 0; order: -1; }
-  .overlay{ animation: none; min-height: 220px; }
+  .overlay{ min-height: 220px; }
   .overlay-panel{ padding: 32px 24px; }
   .form-panel form{ padding: 32px 24px; }
 }

@@ -86,7 +86,9 @@ header { background-color: var(--claro); }
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, .45);
 }
 
+
 /* Cajas de los textos*/
+
 .caja-texto {
     padding: 1.5rem;
     background-color: #4b5e7a63;
@@ -126,7 +128,9 @@ header { background-color: var(--claro); }
     width: 100%;
 }
 
-.btn-explorar:hover { background-color: var(--claro); color: var(--azul); }
+.btn-explorar:hover { 
+    background-color: var(--claro); color: var(--azul); 
+}
 
 /* ========== FOOTER ========== */
 .footer-gestnova {
@@ -152,6 +156,25 @@ header { background-color: var(--claro); }
     text-decoration: none;
     z-index: 1030;
 }
+
+.facebook {
+    position: fixed;
+    left: 14px;
+    bottom: 14px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #1877F2;
+    border: 2px solid rgba(255, 255, 255, .8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    z-index: 1030;
+}
+
 
 /* ========== BREAKPOINTS DE BOOTSTRAP ========== */
 
