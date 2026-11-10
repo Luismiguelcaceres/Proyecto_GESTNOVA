@@ -88,7 +88,6 @@
 
     mostrarTabla();
     mostrarResumen();
-
     entradaCodigo.value = "";
     entradaProducto.value = "";
     entradaCantidad.value = "";
