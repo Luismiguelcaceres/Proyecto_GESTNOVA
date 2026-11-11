@@ -367,6 +367,13 @@ header { background-color: var(--claro); }
     z-index: 1030;
 }
 
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
 .facebook {
     position: fixed;
     left: 14px;
@@ -383,6 +390,16 @@ header { background-color: var(--claro); }
     font-size: 1.5rem;
     text-decoration: none;
     z-index: 1030;
+}
+
+.footer-gestnova {
+    position: relative; /* el footer es la referencia */
+}
+
+.facebook {
+    position: absolute; /* se ancla al footer, no a la pantalla */
+    left: 20px;
+    bottom: 20px;
 }
 
 /* ========== BREAKPOINTS DE BOOTSTRAP ========== */
