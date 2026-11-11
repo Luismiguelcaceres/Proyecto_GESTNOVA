@@ -385,6 +385,18 @@ header { background-color: var(--claro); }
     z-index: 1030;
 }
 
+
+/* boton de facebook dentro del footer */
+.footer-gestnova {
+    position: relative; /* el footer es la referencia */
+}
+
+.facebook {
+    position: absolute; /* se ancla al footer, no a la pantalla */
+    left: 20px;
+    bottom: 20px;
+}
+
 /* ========== BREAKPOINTS DE BOOTSTRAP ========== */
 
 /* sm: ≥ 576px */
