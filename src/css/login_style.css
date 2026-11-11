@@ -25,8 +25,6 @@ body{
   padding: 24px;
 }
 
-
-
 .container{
   position: relative;
   width: 100%;
@@ -178,55 +176,89 @@ body{
 }
 .btn-ghost:hover{ background: #fff; color: var(--grad-2); }
 
-.btn-tema {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 30;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid var(--grad-3);
-  background: var(--paper);
-  color: var(--ink);
-  font-size: 1.15rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
 
-body.dark-mode {
-  --ink: #f4f7fb;
-  --muted: #90cdf4;
-  --line: #3d5168;
-  --paper: #1e2833;
-  --bg: #12181f;
-}
+    /* ===== Botón de tema ===== */
+    .btn-tema {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--grad-3);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
 
-body.dark-mode .field {
-  background: #2a3848;
-  color: #f4f7fb;
-}
+    /* ===== Modo oscuro ===== */
+    body.dark-mode {
+    --ink: #f4f7fb;
+    --muted: #90cdf4;
+    --line: #3d5168;
+    --paper: #1e2833;
+    --bg: #12181f;
+    }
 
-body.dark-mode .field::placeholder { 
-  color: #a0aec0; 
-}
+    body.dark-mode .field {
+    background: #2a3848;
+    color: #f4f7fb;
+    }
 
-body.dark-mode .field:focus { 
-  background: #243044; 
-}
+    body.dark-mode .field::placeholder { color: #a0aec0; }
+    body.dark-mode .field:focus { background: #243044; }
+    body.dark-mode .overlay { background: #243044; }
+    body.dark-mode .form-panel h1 { color: var(--muted); }
 
-body.dark-mode .overlay { 
-  background: #243044; 
-}
+    body.dark-mode .btn-tema {
+    background: #2c3e55;
+    border-color: #718096;
+    color: #f6e05e;
+    }
 
-body.dark-mode .btn-tema {
-  background: #2c3e55;
-  border-color: #718096;
-  color: #f6e05e;
-}
+    /* ===== Ojo de contraseña ===== */
+    .password-wrap {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+    }
+
+    .password-wrap .field {
+    margin-bottom: 0;
+    padding-right: 44px;
+    }
+
+    .btn-ojo {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 1.1rem;
+    }
+
+    .btn-ojo:hover { color: var(--grad-2); }
+
+    /* ===== Texto oculto para lectores de pantalla (el <legend>) ===== */
+    .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    }
+
+/*--------- RESPONSIVE ---------- */
 
 @media (max-width: 700px){
   .container{ min-height: 0; display: flex; flex-direction: column; }

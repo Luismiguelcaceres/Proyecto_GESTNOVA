@@ -21,54 +21,65 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <header class="d-flex justify-content-between align-items-center px-4 py-2 shadow-sm sticky-top">
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-4">
 
-        <a href="index.html" class="marca d-flex align-items-center gap-2">
-            <img src="assets/imagenes/logo.jpg" alt="Logo GESTNOVA" width="170" class="img-fluid">
-        </a>
+            <!-- IZQUIERDA: Logo -->
+            <a class="navbar-brand marca d-flex align-items-center" href="Index.html">
+                <img src="assets/imagenes/logo.jpg" alt="Logo" class="me-2">
+                <span class="marca-texto"></span>
+            </a>
 
-        <nav class="navbar navbar-expand-lg p-0" aria-label="Menú principal">
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+            <!-- Botón hamburguesa (solo móvil) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- DERECHA: Menú + botón modo -->
             <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-3">
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menuServicios"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
-                        <ul class="dropdown-menu" aria-labelledby="menuServicios">
-                            <li><a class="dropdown-item" href="#">Conoce nuestros servicios</a></li>
-                            <li><a class="dropdown-item" href="#">Solicitud de servicios</a></li>
-                        </ul>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menuContacto"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">Contacto</a>
-                        <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="menuContacto">
-                            <li><a class="dropdown-item" href="#">Nuestra Empresa</a></li>
-                            <li><a class="dropdown-item" href="#">Nuestro Equipo</a></li>
-                            <li><a class="dropdown-item" href="#">Sedes y Contacto</a></li>
-                        </ul>
-                    </li>
+                <!-- Botón Modo Día/Noche -->
+                <li class="nav-item">
+                    <button id="btnModo" class="btn btn-modo" title="Cambiar modo">
+                    🌙
+                    </button>
+                </li>
+
                 </ul>
             </div>
-
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
     <!-- CARRUSEL-->
-    <section aria-label="Galería de imágenes">
+    <section class="galeria" aria-label="Galería de imágenes">
         <img class="mySlides" src="assets/imagenes/cmdimg1.jpg" alt="CMD imagen 1" style="width:100%">
         <img class="mySlides" src="assets/imagenes/cmdimg2.jpg" alt="CMD imagen 2" style="width:100%">
         <img class="mySlides" src="assets/imagenes/cmdimg3.jpg" alt="CMD imagen 3" style="width:100%">
         <img class="mySlides" src="assets/imagenes/cmdimg4.jpg" alt="CMD imagen 4" style="width:100%">
     </section>
+
+    <!-- CARRUSEL manual-->
+
+    <!-- Puntos indicadores -->
+    <div style="text-align:center; margin-top: 15px;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
 
     <main class="flex-grow-1">
 
