@@ -1,16 +1,146 @@
-/* ========== TIPOGRAFÍA ========== */
+/* ========== TIPOGRAFÍA Y COLORES ========== */
 :root {
     --fuente-titulos: 'Source Serif 4', Georgia, 'Times New Roman', serif;
     --fuente-texto: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
 
-    /* Paleta */
-    --azul: #076ac3;         
-    --claro: #f3fbfb;         
-    --pizarra: #4B5E7A;      
-    --celeste: #5299D3;      
+    /* ===== MODO NOCHE (actual) ===== */
+    --azul: #076ac3;
+    --azul-oscuro: #055399;
+    --celeste: #5299D3;
+    --pizarra: #4B5E7A;
 
-    --azul-oscuro: #055399;   
-    --fondo-oscuro: #0b1626;  
+    --fondo: #0b1626;
+    --fondo-secundario: #14233a;
+    --texto: #f3fbfb;
+    --texto-secundario: #c5d4e8;
+    --tarjeta: #4b5e7a63;
+    --borde: rgba(243, 251, 251, 0.25);
+    --sombra: rgba(0, 0, 0, 0.35);
+}
+
+/* ===== MODO DÍA ===== */
+body.modo-dia {
+    --azul: #076ac3;
+    --azul-oscuro: #055399;
+    --celeste: #3a8bc9;
+    --pizarra: #3a4a63;
+
+    --fondo: #f0f5fa;
+    --fondo-secundario: #ffffff;
+    --texto: #1a2a3a;
+    --texto-secundario: #4a5c70;
+    --tarjeta: rgba(255, 255, 255, 0.85);
+    --borde: rgba(75, 94, 122, 0.2);
+    --sombra: rgba(0, 0, 0, 0.12);
+}
+
+/* Textos generales */
+body {
+    font-family: var(--fuente-texto);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--texto);
+    background-color: var(--fondo);
+    transition: background-color 0.4s ease, color 0.4s ease;
+
+    /* Fondo (solo se ve bien en modo noche) */
+    background-image:
+        radial-gradient(circle at 15% 10%, rgba(82, 153, 211, .25), transparent 55%),
+        radial-gradient(circle at 85% 85%, rgba(7, 106, 195, .20), transparent 55%),
+        linear-gradient(rgba(8, 16, 28, .72), rgba(8, 16, 28, .72)),
+        url('../imagenes/fondo-hero.jpg'),
+        linear-gradient(180deg, #0b1626 0%, #14304f 55%, #0b1626 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* En modo día quitamos la imagen de fondo */
+body.modo-dia {
+    background-image: none;
+    background-color: var(--fondo);
+}
+
+/* Header */
+header {
+  background-color: var(--texto-secundario);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Contenedor del navbar a todo el ancho */
+.navbar .container-fluid {
+  background-color: var(--pizarra);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo a la izquierda */
+.navbar-brand {
+  margin-right: 0;
+}
+
+/* Menú empujado a la derecha */
+.navbar-nav {
+  margin-left: auto;
+}
+
+/* Botón del modo */
+.btn-modo {
+  background-color: transparent;
+  border: 1px solid var(--borde);
+  color: var(--texto);
+  font-size: 1.15rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.btn-modo:hover {
+  background-color: var(--azul);
+  border-color: var(--azul);
+  color: white;
+  transform: scale(1.08);
+}
+
+/* Tarjetas de acceso */
+.acceso {
+    color: var(--texto);
+    background-color: var(--tarjeta);
+    border: 1px solid var(--borde);
+    box-shadow: 0 .75rem 1.5rem var(--sombra);
+}
+
+.acceso:hover {
+    background-color: var(--fondo-secundario);
+    color: var(--texto);
+}
+
+/* Cajas de texto */
+.caja-texto {
+    background-color: var(--tarjeta);
+    border: 1px solid var(--borde);
+    color: var(--texto);
+}
+
+/* Iconos */
+.acceso-icono {
+    background-color: rgba(82, 153, 211, .28);
+    border: 1px solid rgba(82, 153, 211, .6);
+    color: var(--texto);
+}
+
+body.modo-dia .acceso-icono {
+    background-color: rgba(7, 106, 195, 0.12);
+    border-color: var(--azul);
+    color: var(--azul);
 }
 
 /* Títulos: Source Serif 4 */
@@ -51,7 +181,7 @@ header { background-color: var(--claro); }
 .marca img { width: 120px; }
 .marca-texto { color: var(--pizarra); text-decoration: none; }
 
-.navbar .nav-link { color: var(--pizarra); }
+.navbar .nav-link { color: var(--fondo); }
 .navbar .nav-link:hover { color: var(--azul); }
 
 .btn-nav {
@@ -60,7 +190,87 @@ header { background-color: var(--claro); }
     color: #fff;
     width: 100%;
 }
-.btn-nav:hover { background-color: var(--azul-oscuro); color: #fff; }
+
+.btn-nav:hover { 
+    background-color: var(--azul-oscuro); color: #fff; 
+}
+
+
+* {box-sizing:border-box}
+
+/* carrusel de imagenes */
+.galeria {
+  max-width: 2000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 2000px;
+  position: relative;
+  margin: auto;
+  overflow: hidden; /* evita que las flechas se salgan */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 17px;
+  width: 17px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 /* Tarjetas de iniciar sesión / registrarse*/
 
@@ -119,7 +329,7 @@ header { background-color: var(--claro); }
 
 /* Botón explorar */
 .btn-explorar {
-    background-color: rgba(0, 0, 0, .45);
+    background-color: #bbb;
     border: 2px solid var(--claro);
     color: var(--claro);
     border-radius: .6rem;
@@ -174,7 +384,6 @@ header { background-color: var(--claro); }
     text-decoration: none;
     z-index: 1030;
 }
-
 
 /* ========== BREAKPOINTS DE BOOTSTRAP ========== */
 
